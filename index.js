@@ -13,6 +13,10 @@ const sleep = (milliseconds) => {
   return new Promise(resolve => setTimeout(resolve, milliseconds));
 };
 
+app.get('/',  async (req, res) => {
+  res.send({status:1, message: 'script aktif'})
+})
+
 // Api Nyaaa
 app.get('/api/email',  async (req, res) => {
   const { email } = await func.getEmail()
